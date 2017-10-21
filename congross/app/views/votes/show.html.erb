@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chamber:</strong>
+  <%= @vote.chamber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @vote.description %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @vote.date %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @vote.session %>
+</p>
+
+<p>
+  <strong>Rollcall:</strong>
+  <%= @vote.rollcall %>
+</p>
+
+<%= link_to 'Edit', edit_vote_path(@vote) %> |
+<%= link_to 'Back', votes_path %>
