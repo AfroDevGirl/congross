@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Representatives</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propublica</th>
+      <th>First name</th>
+      <th>Middle name</th>
+      <th>Last name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @representatives.each do |representative| %>
+      <tr>
+        <td><%= representative.propublica_id %></td>
+        <td><%= representative.first_name %></td>
+        <td><%= representative.middle_name %></td>
+        <td><%= representative.last_name %></td>
+        <td><%= link_to 'Show', representative %></td>
+        <td><%= link_to 'Edit', edit_representative_path(representative) %></td>
+        <td><%= link_to 'Destroy', representative, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Representative', new_representative_path %>
