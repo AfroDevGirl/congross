@@ -1,0 +1,37 @@
+<%= form_with(model: representative, local: true) do |form| %>
+  <% if representative.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(representative.errors.count, "error") %> prohibited this representative from being saved:</h2>
+
+      <ul>
+      <% representative.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :propublica_id %>
+    <%= form.text_field :propublica_id, id: :representative_propublica_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :representative_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :middle_name %>
+    <%= form.text_field :middle_name, id: :representative_middle_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :representative_last_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

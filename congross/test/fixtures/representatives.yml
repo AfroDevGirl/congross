@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  propublica_id: MyString
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+
+two:
+  propublica_id: MyString
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
