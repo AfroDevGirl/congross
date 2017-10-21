@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @bill.number %>
+</p>
+
+<p>
+  <strong>Bill:</strong>
+  <%= @bill.bill_id %>
+</p>
+
+<p>
+  <strong>Api url:</strong>
+  <%= @bill.api_url %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bill.title %>
+</p>
+
+<p>
+  <strong>Latest action:</strong>
+  <%= @bill.latest_action %>
+</p>
+
+<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>

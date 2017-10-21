@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  bill_id: MyString
+  api_url: MyString
+  title: MyString
+  latest_action: MyString
+
+two:
+  number: MyString
+  bill_id: MyString
+  api_url: MyString
+  title: MyString
+  latest_action: MyString
