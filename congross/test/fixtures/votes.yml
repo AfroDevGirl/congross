@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chamber: MyString
+  description: MyString
+  date: MyString
+  session: MyString
+  rollcall: MyString
+
+two:
+  chamber: MyString
+  description: MyString
+  date: MyString
+  session: MyString
+  rollcall: MyString

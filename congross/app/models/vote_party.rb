@@ -1,0 +1,2 @@
+class VoteParty < ApplicationRecord
+end
