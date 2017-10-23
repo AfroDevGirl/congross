@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171021163620) do
+ActiveRecord::Schema.define(version: 20171021163843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,56 @@ ActiveRecord::Schema.define(version: 20171021163620) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "commitees", force: :cascade do |t|
+    t.string "propublica_id"
+    t.string "name"
+    t.string "chamber"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "representatives", force: :cascade do |t|
+    t.string "propublica_id"
+    t.string "first_name"
+    t.string "middle_name"
+    t.string "last_name"
+    t.string "propublica_uri"
+    t.string "date_of_birth"
+    t.string "party"
+    t.string "leadership_role"
+    t.string "twitter_account"
+    t.string "facebook_account"
+    t.string "youtube_account"
+    t.string "fec_candidate_id"
+    t.string "website_url"
+    t.boolean "in_office"
+    t.float "dw_nominate"
+    t.string "seniority"
+    t.string "next_election"
+    t.integer "total_votes"
+    t.integer "missed_votes"
+    t.integer "total_present"
+    t.string "office_address"
+    t.string "office_phone"
+    t.string "office_fax"
+    t.string "state"
+    t.string "senate_class"
+    t.string "district"
+    t.boolean "at_large"
+    t.string "state_rank"
+    t.string "lis_id"
+    t.float "missed_votes_pct"
+    t.float "votes_with_party_pct"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subcommitees", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "vote_parties", force: :cascade do |t|
     t.string "party_name"
     t.integer "yes"
@@ -62,7 +112,7 @@ ActiveRecord::Schema.define(version: 20171021163620) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.string "congress_no"
+    t.string "congress_num"
     t.string "chamber"
     t.string "description"
     t.string "date"

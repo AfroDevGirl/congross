@@ -1,7 +1,7 @@
 class CreateVotes < ActiveRecord::Migration[5.1]
   def change
     create_table :votes do |t|
-      t.string :congress_no
+      t.string :congress_num
       t.string :chamber
       t.string :description
       t.string :date
@@ -14,8 +14,8 @@ class CreateVotes < ActiveRecord::Migration[5.1]
       t.string :source
       t.string :url
       t.string :vote_uri
-      
-      
+
+
 
       t.timestamps
     end
