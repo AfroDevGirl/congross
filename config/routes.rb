@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :amendments
   resources :commitees
   resources :representatives
   resources :bills

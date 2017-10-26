@@ -1,0 +1,2 @@
+class Amendment < ApplicationRecord
+end
