@@ -41,9 +41,8 @@ class CreateBills < ActiveRecord::Migration[5.1]
       t.string :legislative_day #earliest the bills could be considered
       t.string :status
 
-      serialize :actions
-      serialize :amendments
-      serialize :subjects
+      #serialize :actions
+      #serialize :subjects
       #t.string :subjects, array: true
 
       t.timestamps
