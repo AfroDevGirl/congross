@@ -1,4 +1,4 @@
-class CommiteEsController < ApplicationController
+class CommiteesController < ApplicationController
   before_action :set_commitee, only: [:show, :edit, :update, :destroy]
 
   # GET /commitees
