@@ -15,8 +15,6 @@ class CreateVotes < ActiveRecord::Migration[5.1]
       t.string :url
       t.string :vote_uri
 
-
-
       t.timestamps
     end
   end
