@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Propublica:</strong>
+  <%= @committee.propublica_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @committee.name %>
+</p>
+
+<p>
+  <strong>Chamber:</strong>
+  <%= @committee.chamber %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @committee.url %>
+</p>
+
+<%= link_to 'Edit', edit_committee_path(@committee) %> |
+<%= link_to 'Back', committees_index_path %>

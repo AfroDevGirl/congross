@@ -1,6 +1,6 @@
- class CreateSubcommitees < ActiveRecord::Migration[5.1]
+ class CreateSubcommittees < ActiveRecord::Migration[5.1]
   def change
-    create_table :subcommitees do |t|
+    create_table :subcommittees do |t|
       t.string :propublica_id
       t.string :name
       t.string :propublica_uri

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SubcommiteeTest < ActiveSupport::TestCase
+class SubcommitteeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

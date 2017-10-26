@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :amendments
-  resources :commitees
+  resources :committees
   resources :representatives
   resources :bills
   resources :votes

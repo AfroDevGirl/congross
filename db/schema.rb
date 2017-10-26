@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20171021163843) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "commitees", force: :cascade do |t|
+  create_table "committees", force: :cascade do |t|
     t.string "propublica_id"
     t.string "name"
     t.string "chamber"
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20171021163843) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "subcommitees", force: :cascade do |t|
+  create_table "subcommittees", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
