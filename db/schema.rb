@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171021163843) do
+ActiveRecord::Schema.define(version: 20171026193253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "amendments", force: :cascade do |t|
+    t.string "title"
+    t.string "amendment_number"
+    t.string "sponsor"
+    t.string "sponsor_id"
+    t.string "sponsor_title"
+    t.string "sponsor_state"
+    t.string "sponsor_party"
+    t.string "introduced_date"
+    t.string "latest_major_action_date"
+    t.string "latest_major_action"
+    t.string "congressdotgov_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "bills", force: :cascade do |t|
     t.string "propublica_id"
@@ -50,7 +66,7 @@ ActiveRecord::Schema.define(version: 20171021163843) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "commitees", force: :cascade do |t|
+  create_table "committees", force: :cascade do |t|
     t.string "propublica_id"
     t.string "name"
     t.string "chamber"
@@ -95,7 +111,16 @@ ActiveRecord::Schema.define(version: 20171021163843) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "subcommitees", force: :cascade do |t|
+  create_table "subcommittees", force: :cascade do |t|
+    t.string "propublica_id"
+    t.string "name"
+    t.string "propublica_uri"
+    t.string "congress"
+    t.string "chamber"
+    t.string "chair_id"
+    t.string "chair_party"
+    t.string "chair_state"
+    t.string "ranking_member_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -112,7 +137,7 @@ ActiveRecord::Schema.define(version: 20171021163843) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.string "congress_num"
+    t.string "congress_no"
     t.string "chamber"
     t.string "description"
     t.string "date"

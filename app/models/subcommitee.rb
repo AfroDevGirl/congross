@@ -1,2 +1,0 @@
-class Subcommitee < ApplicationRecord
-end

@@ -1,2 +1,0 @@
-class Commitees < ApplicationRecord
-end

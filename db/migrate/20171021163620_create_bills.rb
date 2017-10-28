@@ -2,10 +2,13 @@ class CreateBills < ActiveRecord::Migration[5.1]
   def change
     create_table :bills do |t|
       t.string :propublica_id
+      t.string :congress_num
       t.string :bill_type
+      t.string :bill_slug
+      t.string :bill_uri
       t.string :number
-      t.string :api_url
       t.string :title
+      t.string :short_title
       t.string :sponsor_id
       t.string :sponsor_title
       t.string :sponsor_name
@@ -13,6 +16,10 @@ class CreateBills < ActiveRecord::Migration[5.1]
       t.string :sponsor_party
       t.string :sponsor_uri
       t.integer :cosponsors
+      t.integer :cosponsors_r
+      t.integer :cosponsors_d
+      t.integer :cosponsors_i
+      t.integer :withdrawn_cosponsors
       t.string :gpo_pdf_uri
       t.string :congressdotgov_url
       t.string :govtrack_url
@@ -31,6 +38,7 @@ class CreateBills < ActiveRecord::Migration[5.1]
       t.string :latest_major_action_date
       t.string :latest_major_action
       t.string :latest_action
+      t.string :legislative_day
       t.string :status
 
       t.timestamps

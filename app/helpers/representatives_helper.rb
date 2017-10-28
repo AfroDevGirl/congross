@@ -1,2 +1,2 @@
-module RepresentativEsHelper
+module RepresentativesHelper
 end
